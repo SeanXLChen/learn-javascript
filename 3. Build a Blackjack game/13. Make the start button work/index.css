@@ -23,5 +23,11 @@ background - goldenrod
  */
  
 button {
-
+    width: 150px;
+    background-color: goldenrod;
+    color: #016f32;
+    border: none;
+    font-weight: bold;
+    padding: 5px 0px;
+    border-radius: 2px;
 }
