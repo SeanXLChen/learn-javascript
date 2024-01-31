@@ -7,6 +7,8 @@ let message = ""
 
 
 let messageEl = document.getElementById("message-el");
+let cardEl = document.getElementById("cardEl");
+let sumEl = document.getElementById("sumEl");
 
 function startGame() {
     if (sum <= 20) {
@@ -19,6 +21,15 @@ function startGame() {
         isAlive = false;
     }
 
-    //display the message
+    //display the infos
+    cardEl.textContent = "Cards: " + firstCard + " " + secondCard;
+    sumEl.textContent = "Sum: " + sum;
     messageEl.textContent = message;
+}
+
+function newCard() {
+    let newCardNum = Math.floor(Math.random() * 10) + 1;
+    sum += newCardNum;
+    startGame()
+    cardEl.textContent += " " + newCardNum;
 }
