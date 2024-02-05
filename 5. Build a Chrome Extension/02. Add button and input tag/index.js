@@ -1,10 +1,14 @@
 
-function saveLead() {
-    console.log('Button Clicked')
+const myLeads = []
+const inputEl = document.querySelector("#input-el")
+const inputBtn = document.getElementById("input-btn");
+
+function addContentToArray(){
+    myLeads.push(inputEl.value)
+
+    myLeads.forEach((item) => {
+        console.log(item);
+    })
 }
 
-inputBtn = document.getElementById("input-btn");
-
-inputBtn.addEventListener("click", function() {
-    console.log("Button clicked from eventListener!")
-})
+inputBtn.addEventListener("click", addContentToArray);
