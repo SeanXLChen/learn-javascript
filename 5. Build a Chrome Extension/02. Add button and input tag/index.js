@@ -6,7 +6,15 @@ const ulEl = document.querySelector("#ul-el");
 
 function addContentToWebpage(value) {
     const li = document.createElement("li");
-    li.textContent = value;
+    const link = document.createElement("a");
+    
+    link.textContent = value;
+    link.href = value;
+    link.target = "_blank";
+    link.rel = "noopener noreferrer"; // Security for opening links in a new tab
+    
+    li.appendChild(link);
+
     ulEl.append(li);
 }
 
