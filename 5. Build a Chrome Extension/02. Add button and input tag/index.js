@@ -5,6 +5,9 @@ const inputBtn = document.getElementById("input-btn");
 const ulEl = document.querySelector("#ul-el");
 
 function addContentToWebpage(value) {
+    // Save Array to localStorage
+    localStorage.setItem("myLeads", JSON.stringify(myLeads))
+
     const li = document.createElement("li");
     const link = document.createElement("a");
     
@@ -20,6 +23,9 @@ function addContentToWebpage(value) {
 
 function addContentToArray(){
     myLeads.push(inputEl.value)
+
+    // Save Array to localStorage
+    localStorage.setItem("myLeads", JSON.stringify(myLeads))
     
     addContentToWebpage(inputEl.value)
 
